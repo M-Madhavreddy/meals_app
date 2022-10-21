@@ -12,7 +12,25 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Meals Recipes',
      theme: ThemeData(
-       primarySwatch: Colors.blue,
+       primarySwatch: Colors.pink,
+       accentColor: Colors.amber,
+       canvasColor: Color.fromRGBO(255, 250, 250, 0.7),
+       fontFamily: 'Raleway',
+         textTheme: ThemeData.light().textTheme.copyWith(
+       bodyText1: TextStyle(
+       color : Color.fromRGBO(20, 50, 50, 1),
+       ),
+             bodyText2 : TextStyle(
+         color : Color.fromRGBO(20, 50, 50, 1),
+                 fontFamily : 'RobotoCondensed' ,
+             ),
+           subtitle1 : TextStyle(
+             fontSize: 20,
+             fontFamily : 'RobotoCondensed',
+           )
+
+
+    )
      ),
      home : const _MyHomePage(),
     );
@@ -26,7 +44,7 @@ class _MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
        appBar: AppBar(
-         title: Text("'Meals Recipes'"),
+         title: Text("Meals Recipes"),
        ),
       body: categoryScreen(),
     );
