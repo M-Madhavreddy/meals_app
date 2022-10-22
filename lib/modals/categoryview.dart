@@ -10,12 +10,13 @@ class categoryView extends StatelessWidget {
   categoryView({
     required this.bgcolor,
     required this.title,
+    
   });
 
   void selected(BuildContext ctx) {
     Navigator.of(ctx).push(
       MaterialPageRoute(builder: (_) {
-        return CategoryList();
+        return CategoryList(title: title, color: bgcolor , );
       }),
     );
   }
