@@ -13,8 +13,8 @@ class categoryScreen extends StatelessWidget {
           .map((ctg) => categoryView(bgcolor: ctg.color, title: ctg.title))
           .toList(),
       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 200,
-          childAspectRatio: 3 / 2,
+            maxCrossAxisExtent: 300,
+          childAspectRatio:  5/ 4,
           crossAxisSpacing: 15,
           mainAxisSpacing: 15),
     );
