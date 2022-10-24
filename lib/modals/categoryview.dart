@@ -3,20 +3,20 @@ import 'package:meals_app/categorylist.dart';
 
 class categoryView extends StatelessWidget {
   //const categoryView({Key? key}) : super(key: key);
-
+  final String id;
   final String title;
   final Color bgcolor;
 
   categoryView({
     required this.bgcolor,
     required this.title,
-    
+    required this.id,
   });
 
   void selected(BuildContext ctx) {
     Navigator.of(ctx).push(
       MaterialPageRoute(builder: (_) {
-        return CategoryList(title: title, color: bgcolor , );
+        return CategoryList(id: id,title: title, color: bgcolor , );
       }),
     );
   }
