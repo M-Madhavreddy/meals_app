@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:meals_app/modals/categoryview.dart';
+import 'package:meals_app/Widgets/categoryview.dart';
 
-import 'dummy_data.dart';
+import '../dummy_data.dart';
 
 class categoryScreen extends StatelessWidget {
   //const categoryScreen({Key? key}) : super(key: key);

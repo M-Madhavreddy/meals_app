@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meals_app/categorylist.dart';
+import 'package:meals_app/Screens/categorylist.dart';
 
 class categoryView extends StatelessWidget {
   //const categoryView({Key? key}) : super(key: key);
@@ -14,7 +14,6 @@ class categoryView extends StatelessWidget {
   });
 
   void selected(BuildContext ctx) {
-    print('check');
     Navigator.of(ctx).pushNamed('/category-list', arguments: {
       'id': id,
       'title': title,

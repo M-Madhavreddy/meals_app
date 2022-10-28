@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './dummy_data.dart';
+import '../Widgets/recepieslistview.dart';
+import '../dummy_data.dart';
 
 class CategoryList extends StatelessWidget {
   @override
@@ -19,7 +20,13 @@ class CategoryList extends StatelessWidget {
         ),
         body: ListView.builder(
             itemBuilder: (ctx, index) {
-              return Text(categoryitems[index].title);
+              return recepiesList(
+                title: categoryitems[index].title,
+                imageurl: categoryitems[index].imageUrl,
+                duration: categoryitems[index].duration,
+                complex: categoryitems[index].complexity,
+                affordable: categoryitems[index].affordability,
+              );
             },
             itemCount: categoryitems.length));
   }
