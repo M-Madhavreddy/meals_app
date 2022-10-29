@@ -21,6 +21,7 @@ class CategoryList extends StatelessWidget {
         body: ListView.builder(
             itemBuilder: (ctx, index) {
               return recepiesList(
+                id : categoryitems[index].id,
                 title: categoryitems[index].title,
                 imageurl: categoryitems[index].imageUrl,
                 duration: categoryitems[index].duration,

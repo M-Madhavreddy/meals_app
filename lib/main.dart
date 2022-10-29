@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:meals_app/Screens/category_screen.dart';
-import 'package:meals_app/Screens/categorylist.dart';
+import './Screens/category_screen.dart';
+import './Screens/categorylist.dart';
+
+import 'Screens/recepieview.dart';
 
 void main () => runApp( MyApp());
 
@@ -33,24 +35,12 @@ class MyApp extends StatelessWidget {
 
           )
       ),
-      home : const _MyHomePage(),
+      home: categoryScreen(),
       routes: {
-        '/category-list' : (ctx) => CategoryList()
+        '/category-list' : (ctx) => CategoryList(),
+        '/recepie-view' : (ctx) => Recepieview(),
       },
     );
   }
 }
 
-class _MyHomePage extends StatelessWidget {
-  const _MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: AppBar(
-        title: Text("Meals Recipes"),
-      ),
-      body: categoryScreen(),
-    );
-  }
-}
