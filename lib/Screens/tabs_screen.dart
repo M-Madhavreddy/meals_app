@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meals_app/Screens/Favorites.dart';
 import 'package:meals_app/Screens/category_screen.dart';
 import 'package:meals_app/Screens/categorylist.dart';
+import 'package:meals_app/Widgets/Drawer.dart';
 
 class tabsScreen extends StatefulWidget {
   @override
@@ -9,8 +10,7 @@ class tabsScreen extends StatefulWidget {
 }
 
 class _tabsScreenState extends State<tabsScreen> {
-
-  List<Map<String,dynamic>>screen = [
+  List<Map<String, dynamic>> screen = [
     {'pscreen': categoryScreen(), 'title': 'Categories'},
     {'pscreen': FavoriteScreen(), 'title': 'Favorites'}
   ];
@@ -28,9 +28,10 @@ class _tabsScreenState extends State<tabsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(screen[selectedindex]['title'] ),
+        title: Text(screen[selectedindex]['title']),
       ),
-      body: screen[selectedindex]['pscreen'] ,
+      drawer: drawerPage(),
+      body: screen[selectedindex]['pscreen'],
       bottomNavigationBar: BottomNavigationBar(
         onTap: selectedScreen,
         backgroundColor: Theme.of(context).primaryColor,
