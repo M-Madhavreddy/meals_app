@@ -29,8 +29,8 @@ class drawerPage extends StatelessWidget {
                 size: 26,
               ),
               title: Text('MEALS'),
-              onTap: (){
-                Navigator.of(context).pushNamed('/meals');
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed('/meals');
               },
             ),
             ListTile(
@@ -39,7 +39,9 @@ class drawerPage extends StatelessWidget {
                 size: 26,
               ),
               title: Text('SETTINGS'),
-              onTap: (){Navigator.of(context).pushNamed('/filtersScreen');},
+              onTap: () {
+                Navigator.of(context).pushNamed('/filtersScreen');
+              },
             )
           ],
         ),

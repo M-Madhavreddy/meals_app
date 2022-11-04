@@ -5,14 +5,14 @@ import 'Screens/FiltersScreen.dart';
 import 'Screens/tabs_screen.dart';
 import 'Screens/recepieview.dart';
 
-void main () => runApp( MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Meals Recipes',
       theme: ThemeData(
@@ -22,31 +22,25 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Raleway',
           textTheme: ThemeData.light().textTheme.copyWith(
               bodyText1: TextStyle(
-                color : Color.fromRGBO(20, 50, 50, 1),
+                color: Color.fromRGBO(20, 50, 50, 1),
                 fontSize: 20,
               ),
-              bodyText2 : TextStyle(
-                color : Color.fromRGBO(20, 50, 50, 1),
-                fontFamily : 'RobotoCondensed' ,
-
+              bodyText2: TextStyle(
+                color: Color.fromRGBO(20, 50, 50, 1),
+                fontFamily: 'RobotoCondensed',
               ),
-              subtitle1 : TextStyle(
+              subtitle1: TextStyle(
                 fontSize: 20,
-                fontFamily : 'RobotoCondensed',
+                fontFamily: 'RobotoCondensed',
                 color: Colors.white,
-              )
-
-
-          )
-      ),
+              ))),
       home: tabsScreen(),
       routes: {
-        '/meals' : (ctx) => tabsScreen(),
-        '/category-list' : (ctx) => CategoryList(),
-        '/recepie-view' : (ctx) => Recepieview(),
-        '/filtersScreen' : (ctx) => FiltersScreen(),
+        '/meals': (ctx) => tabsScreen(),
+        '/category-list': (ctx) => CategoryList(),
+        '/recepie-view': (ctx) => Recepieview(),
+        '/filtersScreen': (ctx) => FiltersScreen(),
       },
     );
   }
 }
-

@@ -11,7 +11,7 @@ class CategoryList extends StatelessWidget {
     final categoryid = routearg['id'];
     final categorytitle = routearg['title'];
     final categoryitems = DUMMY_MEALS.where((meal) {
-      return meal.categories.contains(categoryid);
+      return meal.categories.contains(categoryid );
     }).toList();
 
     return Scaffold(
