@@ -3,9 +3,13 @@ import 'package:meals_app/Widgets/categoryview.dart';
 
 import '../dummy_data.dart';
 
-class categoryScreen extends StatelessWidget {
-  //const categoryScreen({Key? key}) : super(key: key);
+class categoryScreen extends StatefulWidget {
+  @override
+  State<categoryScreen> createState() => _categoryScreenState();
+}
 
+class _categoryScreenState extends State<categoryScreen> {
+  //const categoryScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return GridView(

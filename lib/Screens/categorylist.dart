@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
 import '../Widgets/recepieslistview.dart';
 import '../dummy_data.dart';
+import '../modals/recepies.dart';
 
-class CategoryList extends StatelessWidget {
+class CategoryList extends StatefulWidget {
+  final List<Meal> availablemeals;
+  CategoryList(this.availablemeals);
+
+  @override
+  State<CategoryList> createState() => _CategoryListState();
+}
+
+class _CategoryListState extends State<CategoryList> {
   @override
   Widget build(BuildContext context) {
     final routearg =
         ModalRoute.of(context)?.settings.arguments as Map<String, String>;
-
     final categoryid = routearg['id'];
     final categorytitle = routearg['title'];
-    final categoryitems = DUMMY_MEALS.where((meal) {
-      return meal.categories.contains(categoryid );
+
+     final categoryitems = widget.availablemeals.where((meal) {
+      return meal.categories.contains(categoryid);
     }).toList();
 
     return Scaffold(
@@ -21,7 +30,7 @@ class CategoryList extends StatelessWidget {
         body: ListView.builder(
             itemBuilder: (ctx, index) {
               return recepiesList(
-                id : categoryitems[index].id,
+                id: categoryitems[index].id,
                 title: categoryitems[index].title,
                 imageurl: categoryitems[index].imageUrl,
                 duration: categoryitems[index].duration,
